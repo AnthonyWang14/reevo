@@ -17,9 +17,8 @@ def main(cfg):
     logging.info(f"Project Root: {ROOT_DIR}")
     logging.info(f"Using LLM: {cfg.get('model', cfg.llm_client.model)}")
     logging.info(f"Using Algorithm: {cfg.algorithm}")
-
+    # print(f"Using LLM: {cfg.get('model', cfg.llm_client.model)}")
     client = init_client(cfg)
-
     if cfg.algorithm == "reevo":
         from reevo import ReEvo as LHH
     elif cfg.algorithm == "ael":
